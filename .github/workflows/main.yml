@@ -61,7 +61,7 @@ jobs:
         with:
           context: ./backend/
           push: true
-          tags: uses818/kittygram_backend:latest
+          tags: user818/kittygram_backend:latest
 
   frontend_tests:
     runs-on: ubuntu-latest
