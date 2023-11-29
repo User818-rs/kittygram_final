@@ -6,8 +6,8 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt --no-cache-dir
 #Не совсем понял что в данном замечании нужно сделать. 
 COPY ./scripts/entrypoint.prod.sh /app/entrypoint.prod.sh
-RUN ["chmod", "+x", "/app/entrypoint.prod.sh"]
-# ENTRYPOINT ["entrypoint.prod.sh"]
+# RUN ["chmod", "+x", "/app/entrypoint.prod.sh"]
+ENTRYPOINT ["python","/app/entrypoint.prod.sh"]
 
 COPY . .
 
